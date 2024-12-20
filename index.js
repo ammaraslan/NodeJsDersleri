@@ -1,8 +1,9 @@
 var express = require('express');
 var db = require('./Models/db.js');
 var sehirController = require('./Controllers/sehirlerController.js');
-var profilController = require('./Controllers/profilController.js')
-var ulkelerController = require('./Controllers/ulkelerController.js')
+var profilController = require('./Controllers/profilController.js');
+var ulkelerController = require('./Controllers/ulkelerController.js');
+var kitaplarController = require('./Controllers/kitaplarController.js');
 var app = express();
 
 app.use(express.json());
@@ -24,10 +25,11 @@ app.get('/sehir-listele',profilController.SehirListele)
 
 app.get('/ulke-listele',ulkelerController.UlkeListele)
 
+app.get('/kitap-listele',kitaplarController.KitapListele)
+
 
 app.listen(1000,()=>{
     db.baglan;
-    
     console.log("Sunucu Ayaktadır")
 })
 
