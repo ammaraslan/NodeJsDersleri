@@ -20,11 +20,9 @@ const Ulkeler = db.sequelize.define('ulkeler',
         timestamps:false,
     })
 
-// İlişki tanımlama
 Sehirler.hasOne(Ulkeler, { foreignKey: 'baskent', sourceKey: 'plaka' });
 Ulkeler.belongsTo(Sehirler, { foreignKey: 'baskent', targetKey: 'plaka' });
 
 module.exports = Ulkeler;
-//MERHABA DÜNYA
 
 
