@@ -25,3 +25,6 @@ Sehirler.hasOne(Ulkeler, { foreignKey: 'baskent', sourceKey: 'plaka' });
 Ulkeler.belongsTo(Sehirler, { foreignKey: 'baskent', targetKey: 'plaka' });
 
 module.exports = Ulkeler;
+//MERHABA DÜNYA
+
+
